@@ -1,0 +1,82 @@
+﻿@page
+@model Jarjestelma.Pages.AsiakasLista.IndexModel
+
+<br />
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-info">Asiakkaat</h2>
+    </div>
+    <div class="col-3">
+        <a asp-page="Lisaa" class="btn btn-info form-control text-white">Lisää uusi asiakas</a>
+    </div>
+
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @*Kutsutaan OnGet() data*@
+            @if (Model.Customers.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>
+                            <label asp-for="Customers.FirstOrDefault().CompanyName">Yrityksen nimi</label>
+                        </th>
+                        <th>
+                            @*@Html.DisplayNameFor(m=>m.Customers.FirstOrDefault().ContactName)*@
+                            <label asp-for="Customers.FirstOrDefault().ContactName">Yhteyshenkilö</label>
+                        </th>
+                        <th>
+                            <label asp-for="Customers.FirstOrDefault().Address">Yritysosoite</label>
+                        </th>                       
+                        <th>
+                            <label asp-for="Customers.FirstOrDefault().Phone">Puh.</label>
+                        </th>
+                    </tr>
+                    @foreach(var item in Model.Customers)
+                    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(m => item.CompanyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.ContactName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.Address)<br />
+                        @Html.DisplayFor(m => item.PostalCode)
+                        @Html.DisplayFor(m => item.City)<br />
+
+                        @*Lisätään pilkku kaunpungin ja seudun väliin, jos seutu ei ole null*@
+                        @if (item.Region != null)
+                        {
+                            @Html.DisplayFor(m => item.Country)@:,                            
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(m => item.Country)
+                        }
+
+                        @Html.DisplayFor(m => item.Region)
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.Phone)
+                    </td>
+                    
+                    <td align="right">
+                        <a class="btn btn-info btn-sm text-white">Lisätiedot</a>
+                        <a asp-page="Muokkaa" asp-route-id="@item.CustomerID" class="btn btn-success btn-sm text-white">Muokkaa</a>
+                        <button asp-page-handler="Poista" asp-route-id="@item.CustomerID" onclick="return confirm('Oletko varma, että haluat poistaa asiakkaan?')" class="btn btn-danger btn-sm m-1">Poista</button>
+
+                    </td>
+                </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>Ei asiakkaita.</p>
+            }
+        </form>
+    </div>
+ </div>
+
