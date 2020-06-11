@@ -5,5 +5,5 @@ Sähköinen järjestelmä, joka on tehty käyttämällä ASP.NET Corea ja Razori
 - Projektiin lisätty asiakaslista CRUD-ominaisuuksilla.
 
 <h2>Seuraavaksi</h2>
-- Seuraava tavoite on luoda hakukenttä asiakaslistaa varten ja kehittää sivu tilauksille.
+- Seuraava tavoite on luoda hakukenttä asiakaslistalle ja kehittää sivut työntekijöille ja tilauksille.
 
