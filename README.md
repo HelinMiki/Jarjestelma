@@ -1,5 +1,5 @@
 # Järjestelmä
-Sähköinen järjestelmä, joka on tehty käyttämällä ASP.NET Corea ja Razoria. Projekti on vielä kesken.
+Sähköinen järjestelmä, joka on tehty käyttämällä ASP.NET Corea ja Razoria. Projekti on vielä kesken. Tietokantana käytetään Microsoftin Northwind tietokantaa.
 
 <h2>Uutta</h2>
 - Projektiin lisätty asiakaslista CRUD-ominaisuuksilla.
