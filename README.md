@@ -17,7 +17,7 @@ Web-järjestelmä, joka on tehty käyttämällä ASP.NET Corea ja Razoria. Proje
     Kirjautuminen ja rekisteröityminen
   </li>
    <li>
-    Vaihdetaan Razorin tilalle front-end-kirjasto (React || Vue)
+    Vaihdetaan Razorin tilalle front-end-kirjasto (React/Vue)
   </li>
 </ul> 
 <br />
