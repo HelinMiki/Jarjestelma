@@ -5,6 +5,6 @@ Web-järjestelmä, joka on tehty käyttämällä ASP.NET Corea ja Razoria. Proje
 - Projektiin lisätty asiakaslista CRUD-ominaisuuksilla.
 
 <h2>Seuraavaksi</h2>
-- Seuraava tavoite on luoda hakukenttä asiakaslistalle ja kehittää sivut työntekijöille, tuotteille ja tilauksille. Määritellään relaatiot tauluille.
+- Seuraava tavoite on luoda hakukenttä asiakaslistalle ja kehittää sivut työntekijöille, tuotteille ja tilauksille. Määritellään relaatiot tauluille.<br />
 - Kirjautuminen ja rekisteröityminen
 
