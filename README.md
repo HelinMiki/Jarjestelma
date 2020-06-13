@@ -9,6 +9,14 @@ Web-järjestelmä, joka on tehty käyttämällä ASP.NET Corea ja Razoria. Proje
 </ul> 
 
 <h2>Seuraavaksi</h2>
-- Seuraava tavoite on luoda hakukenttä asiakaslistalle ja kehittää sivut työntekijöille, tuotteille ja tilauksille. Määritellään relaatiot tauluille.<br />
-- Kirjautuminen ja rekisteröityminen
+<ul>
+  <li>
+    Seuraava tavoite on luoda hakukenttä asiakaslistalle ja kehittää sivut työntekijöille, tuotteille ja tilauksille. Määritellään       relaatiot tauluille.
+  </li>
+   <li>
+    Kirjautuminen ja rekisteröityminen
+  </li>
+</ul> 
+<br />
+
 
