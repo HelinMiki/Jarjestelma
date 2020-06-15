@@ -1,10 +1,27 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Etusivu";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Tervetuloa</h1>
+    <div class="container">
+        <p>
+            Tämä projekti on web-järjestelmä, joka on tehty käyttämällä ASP.NET Corea ja Razoria. Projekti on kesken.
+            Tietokantana käytetään Microsoftin 
+            <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases">Northwind</a>-tietokantaa.
+        </p>
+    </div>
+    
+    <div class="container text-left" >
+        <h3>Seuraavat tavoitteet</h3>
+        <ul class="list-group">
+            <li class="list-group-item">Seuraava tavoite on luoda hakukenttä asiakaslistalle ja kehittää sivut työntekijöille, tuotteille ja tilauksille.</li>
+            <li class="list-group-item">Lisätiedot asiakkaille.</li>
+            <li class="list-group-item">Määritellään relaatiot tauluille.</li>
+            <li class="list-group-item">Kirjautuminen ja rekisteröityminen (Identity/OAuth/Authorization).</li>
+            <li class="list-group-item">Vaihdetaan Razorin tilalle JavaScript-kirjasto (React/Vue/Angular) tai Blazor.</li>
+        </ul>
+    </div>
 </div>

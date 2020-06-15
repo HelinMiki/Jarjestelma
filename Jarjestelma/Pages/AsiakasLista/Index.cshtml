@@ -12,7 +12,7 @@
 
     <div class="col-12 border p-3 mt-3">
         <form method="post">
-            @*Kutsutaan OnGet() data*@
+            @*Kutsutaan IndexModel-luokan OnGet() data*@
             @if (Model.Customers.Count() > 0)
             {
                 <table class="table table-striped border">
@@ -45,7 +45,7 @@
                         @Html.DisplayFor(m => item.PostalCode)
                         @Html.DisplayFor(m => item.City)<br />
 
-                        @*Lisätään pilkku kaunpungin ja seudun väliin, jos seutu ei ole null*@
+                        @*Lisätään pilkku kaupungin ja seudun väliin, jos seudun arvo ei ole null*@
                         @if (item.Region != null)
                         {
                             @Html.DisplayFor(m => item.Country)@:,                            
@@ -62,8 +62,9 @@
                         @Html.DisplayFor(m => item.Phone)
                     </td>
                     
+                    @*Napit. Muutetaan tulevaisuudessa ikoneiksi.*@
                     <td align="right">
-                        <a class="btn btn-info btn-sm text-white">Lisätiedot</a>
+                        <a class="btn btn-info btn-sm text-white" style="text-decoration: line-through;">Lisätiedot</a>
                         <a asp-page="Muokkaa" asp-route-id="@item.CustomerID" class="btn btn-success btn-sm text-white">Muokkaa</a>
                         <button asp-page-handler="Poista" asp-route-id="@item.CustomerID" onclick="return confirm('Oletko varma, että haluat poistaa asiakkaan?')" class="btn btn-danger btn-sm m-1">Poista</button>
 

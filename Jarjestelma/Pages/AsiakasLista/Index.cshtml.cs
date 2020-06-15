@@ -13,6 +13,7 @@ namespace Jarjestelma.Pages.AsiakasLista
     {
         private readonly SovellusDbContext _db;
 
+        /* Yhteys tietokantaan */
         public IndexModel(SovellusDbContext db)
         {
             _db = db;
@@ -21,13 +22,13 @@ namespace Jarjestelma.Pages.AsiakasLista
         public IEnumerable<Customers> Customers { get; set; }
 
 
-        //Lisätään Customersille Customers taulun data
+        //Asetetaan Customersille tietokantataulun data
         public async Task OnGet()
         {
             Customers = await _db.Customers.ToListAsync();
         }
 
-        //Poistetaan asiakas listasta
+        //Poistetaan asiakas listasta id arvolla
         public async Task<IActionResult> OnPostPoista(string id)
         {
             var Customer = await _db.Customers.FindAsync(id);
